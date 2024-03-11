@@ -190,24 +190,6 @@ function Items() {
     }
 
 
-
-
-
-
-    //  const items=[];
-
-    // for (const user of fdata){
-    //     items.push( <tr className="container p-2 ">
-    //     <td>1</td>
-    //     <td data-testid={`cuisine-cell-${key + 1}`}>{user.cuisine} </td>
-    //     <td > {user.quantity} </td>
-    //     <td >{user.instructions}  </td>
-    //     <td ><button type="submit" name='Update' className="btn btn-outline-success m-1" onClick={() => setUpdate(user._id)}><div><PencilSquare /></div></button>
-    //         <button type="submit" name='Delete' className="btn btn-outline-danger" onClick={() => setDelete(user._id)} ><div><Trash /></div></button></td>
-
-    // </tr>)
-    // }
-
     return (
         <div>
             <div className="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
@@ -231,7 +213,7 @@ function Items() {
                                     <div className="form-group" >
                                         <label >Cuisine</label>
                                         <select data-testid='cuisine-input' className="form-control" id="cuisine" name="cuisine" onChange={handleData1} required  >
-                                            <option value="Pizza">Select</option>
+                                            <option value="Pizza" style={{ display : 'none'}}>Select</option>
                                             {Sdata.map((user, key) =>
                                                 <option key={key} >{user.cuisine}  </option>
 
