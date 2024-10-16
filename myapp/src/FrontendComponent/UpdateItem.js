@@ -7,6 +7,7 @@ function UpdateItem() {
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
     const userid = localStorage.getItem('userid');
+    const roleBasedAccess = localStorage.getItem('roleBasedAccess');
     const url1 = "http://127.0.0.1:5000/userValidateTokenController";
 
 
@@ -150,13 +151,15 @@ function UpdateItem() {
                 navigate('/usersignin')
             });
         alert('Order Update !!');
-        if (userid === "nayan448@gmail.com") {
+        if (roleBasedAccess === "admin") {
             navigate('/adminItems');
         }
         else {
             navigate('/Items');
         }
+
     }
+
 
     return (
 
