@@ -211,7 +211,7 @@ function AdminItemsPage() {
                     </div>
 
                 </div>
-                { token == undefined || token == '' ? "Token is expire so firstly login in" : (
+                {token == undefined || token == '' ? "Token is expire so firstly login in" : (
                     <div className="container-fluid center row">
                         <div className="container col-lg-4 bdr center mt-5" >
                             <form onSubmit={handleSubmit1} >
@@ -221,9 +221,9 @@ function AdminItemsPage() {
                                     </div>
                                     <div className="form-group">
                                         <label >Cuisine<sup style={{ color: "#ED7D31" }}>*</sup></label>
-                                        <select className="form-control" data-testid='cuisine-input' id="cuisine" name="cuisine" onChange={handleData1} required >
+                                        <select className="form-control"  data-testid='cuisine-input' id="cuisine" name="cuisine" onChange={handleData1} required >
                                             <option value="Pizza" style={{ display: 'none' }}>Select</option>
-                                            { Sdata.map((user, key) =>
+                                            {Sdata.map((user, key) =>
                                                 <option>{user.cuisine}  </option>
 
                                             )}
@@ -277,7 +277,10 @@ function AdminItemsPage() {
                                         }
                                     </tbody>
                                 </table>
+
+
                             </div>
+
                         </div>
                     </div>
                 )}
